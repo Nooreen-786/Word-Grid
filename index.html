@@ -3,27 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wordle Clone!</title>
-  
-    <!-- Correct CSS link -->
-    <link rel="stylesheet" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Word-Grid</title>
+    <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  
-    <!-- Correct JS link -->
-    <script src="js/main.js" defer></script>
+    <script src="/js/app.js" defer></script>
   </head>
   <body>
-    <div id="container">
+
+    <div class="background"></div>
+    <div id="container"> 
+      <button id="restart-button">Restart</button>
       <div id="game">
         <header>
-          <h1 class="title">WORDLE</h1>
+          <h1 class="title">WORD-Grid</h1>
         </header>
-
         <div id="board-container">
           <div id="board"></div>
+          <div id="square"></div>
         </div>
-
+        
         <div id="keyboard-container">
           <div class="keyboard-row">
             <button data-key="q">q</button>
@@ -60,8 +59,30 @@
             <button data-key="n">n</button>
             <button data-key="m">m</button>
             <button data-key="del" class="wide-button">Del</button>
+              </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div id="welcome-screen">
+      <h1>Welcome to Word-Grid!</h1>
+      <p>Can you guess the word in 6 tries?</p>
+      <button id="start-button">Start Game</button>
+      <button id="how-to-play-button">How to Play</button>
+    </div>
+    
+    <div id="how-to-play-modal" class="hidden">
+      <div class="modal-content">
+        <h2>How to Play</h2>
+        <p>Guess the word in 6 tries. Each guess must be a valid 5-letter word.</p>
+        <p>After each guess, the color of the tiles will change to show how close your guess was:</p>
+        <ul>
+          <li><span style="color: green">Green</span>: Correct letter & position</li>
+          <li><span style="color: yellow">Yellow</span>: Correct letter, wrong position</li>
+          <li><span style="color: gray">Gray</span>: Letter not in the word</li>
+        </ul>
+        <button id="close-modal">Close</button>
       </div>
     </div>
   </body>
