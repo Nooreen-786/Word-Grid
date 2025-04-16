@@ -177,29 +177,12 @@ setInterval(createLetter, 500);
 document.addEventListener("DOMContentLoaded", () => {
     const welcomeScreen = document.getElementById("welcome-screen");
     const startButton = document.getElementById("start-button");
-    const howToPlayButton = document.getElementById("how-to-play-button");
-    const howToPlayModal = document.getElementById("how-to-play-modal");
-    const closeModal = document.getElementById("close-modal");
     const gameContainer = document.getElementById("container");
-    const resetGame= document.getElementById("reset-Game");
 
     gameContainer.style.display = "none";
-  
+
     startButton.addEventListener("click", () => {
-      welcomeScreen.style.display = "none";
-      gameContainer.style.display = "Flex";
+        welcomeScreen.style.display = "none";
+        gameContainer.style.display = "flex";
     });
-  
-    howToPlayButton.addEventListener("click", () => {
-      howToPlayModal.classList.remove("hidden");
-    });
-  
-    closeModal.addEventListener("click", () => {
-      howToPlayModal.classList.add("hidden");
-    });
-  });
-
-
-
-
-  
+});
