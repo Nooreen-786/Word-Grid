@@ -1,5 +1,8 @@
 ! Word-Grid
 
+![Screenshot 2025-04-16 043258](https://github.com/user-attachments/assets/3ce27dc7-d9c0-402b-99a1-2ac7c5057951)
+
+
 🎮 Game Description
 Word-Grid is a browser-based word puzzle game inspired by the classic game Wordle. In this game, the player has a limited number of attempts to guess a hidden five-letter word. Each guess provides feedback via colored tiles:
 
